@@ -4,6 +4,7 @@
         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
         targetNamespace="http://gofannon.io/car"
 >
+    <xsd:element name="car" type="carType"/>
 
     <xsd:simpleType name="fuelType">
         <xsd:restriction>
