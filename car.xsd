@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema
+        xmlns="http://gofannon.io/car"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://gofannon.io/car"
+>
+
+    <xsd:simpleType name="fuelType">
+        <xsd:restriction>
+            <xsd:enumeration value="electric"/>
+            <xsd:enumeration value="diesel"/>
+            <xsd:enumeration value="gazoline"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="positiveIntegerType">
+        <xsd:restriction base="xsd:int">
+            <xsd:minInclusive value="1"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:complexType name="carType">
+        <xsd:attribute name="color" type="xsd:string"/>
+        <xsd:attribute name="fuel-nature" type="fuelType"/>
+        <xsd:attribute name="seat-count" type="positiveIntegerType"/>
+    </xsd:complexType>
+</xsd:schema>
