@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema
+        xmlns="http://gofannon.io/garage"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:c="http://gofannon.io/car"
+        xmlns:t="http://gofannon.io/truck"
+         targetNamespace="http://gofannon.io/garage"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+        http://gofannon.io/car    car.xsd
+        http://gofannon.io/truck  truck.xsd"
+>
+    <xsd:complexType name="garageType">
+        <xsd:sequence minOccurs="0" maxOccurs="100">
+            <xsd:element name="car" type="c:carType" minOccurs="0"/>
+            <xsd:element ref="t:truck" minOccurs="0"/>
+        </xsd:sequence>
+        <xsd:attribute name="name" type="xsd:string"/>
+    </xsd:complexType>
+
+    <xsd:element name="garage" type="garageType"/>
+
+</xsd:schema>
