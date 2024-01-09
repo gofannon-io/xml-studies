@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<garage
+        xmlns="http://gofannon.io/garage"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://gofannon.io/garage garage.xsd"
+        name="Old Screw">
+    <car color="yellow" fuel-nature="gazoline" seat-count="2"/>
+    <truck color="red" tonnage="100" fuel-nature="diesel"/>
+</garage>
